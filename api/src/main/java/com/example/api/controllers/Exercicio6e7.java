@@ -46,7 +46,16 @@ public class Exercicio6e7 {
     @GetMapping("/{day}")
     // localhost:8080/holidays/DD-MM-AAAA para acessar a rota.
     public String verificaFeriado(@PathVariable String day) {
-        return "Dia é ! 🎉";
+
+        Feriado feriado = feriadosDoAno.get(day);
+
+        if (feriado != null) {
+            System.out.println("Dia " + feriado.getData() + " é " + feriado.getNome() + "! 🎉");
+            return "Dia " + feriado.getData() + " é " + feriado.getNome() + "! 🎉";
+        } else {
+            System.out.println("Dia " + day + " não é feriado 🥲");
+            return "Dia " + day + " não é feriado 🥲";
+        }
     }
 
 }
