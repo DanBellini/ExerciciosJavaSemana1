@@ -19,7 +19,7 @@ public class Exercicio3 {
     public String tabelaDeMultiplicacao(@PathVariable int num) {
 
         StringBuilder tabela = new StringBuilder();
-        // imprimindo no terminal
+
         for (int i = 1; i <= 10; i++) {
             int prod = num * i;
 
