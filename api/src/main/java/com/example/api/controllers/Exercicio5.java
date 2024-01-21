@@ -3,7 +3,6 @@ package com.example.api.controllers;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,8 +20,8 @@ public class Exercicio5 {
     // que deseja.
     public String itensDuplicados(@RequestBody String[][] arr) {
 
-        List<String> primeiroArray = new ArrayList<>(List.of(arr[0]));
-        List<String> segundoArray = new ArrayList<>(List.of(arr[1]));
+        List<String> primeiroArray = List.of(arr[0]);
+        List<String> segundoArray = List.of(arr[1]);
 
         StringBuilder duplicados = new StringBuilder();
 
